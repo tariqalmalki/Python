@@ -1,0 +1,33 @@
+##from os import strerror
+##
+##try:
+##    cnt = 0
+##    s = open('C:\\Users\\TARIQALMALKI\\Desktop\\test.txt', "rt")
+##    #try to read the very first character from the file (ch = s.read(1))
+##    ch = s.read(1) 
+##    while ch != '':
+##        print(ch, end='')
+##        cnt += 1
+##        ch = s.read(1)
+##    s.close()
+##    print("\n\nCharacters in file:", cnt)
+##except IOError as e:
+##    print("I/O error occurred: ", strerror(e.errno))
+
+
+#----------------------------------------------------------------------
+
+from os import strerror
+
+try:
+    cnt = 0
+    s = open('C:\\Users\\TARIQALMALKI\\Desktop\\serialoffice.txt', "rt")
+    content = s.read()
+    for ch in content:
+        print(ch, end='')
+        cnt += 1
+        ch = s.read(1)
+    s.close()
+    print("\n\nCharacters in file:", cnt)
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
